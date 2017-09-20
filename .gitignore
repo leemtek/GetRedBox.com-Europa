@@ -24,6 +24,9 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Gulp
+/other/aws/s3/dist
+
 # misc
 /.sass-cache
 /connect.lock

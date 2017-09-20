@@ -13,7 +13,7 @@ var gulp = require("gulp"),
     Obliterate assets/dist folder.
 ============================================================================= */
 gulp.task("clean", function () {
-    return gulp.src("./src/assets/dist", {read: false})
+    return gulp.src("./other/aws/s3/dist", {read: false})
         .pipe(clean());
 });
 
@@ -60,9 +60,8 @@ gulp.task("styles", function() {
         "maxLineLen": 80,
         "uglyComments": true
     })) // uglifycss
-    .pipe(gulp.dest("./src/assets/dist/"))
-; // return gulp.src()
-});
+    .pipe(gulp.dest("./other/aws/s3/dist/"))
+;});
 
 
 /* =============================================================================
@@ -122,9 +121,14 @@ gulp.task("scripts", function() {
     )
     .pipe(concat("scripts.min.js"))
     .pipe(uglify().on("error", gutil.log))
-    .pipe(gulp.dest("./src/assets/dist/"))
-; // return gulp.src()
-});
+    .pipe(gulp.dest("./other/aws/s3/dist/"))
+;});
+
+
+/* =============================================================================
+    Update S3 Assets
+============================================================================= */
+// Disabled since this a public repository.  Copy output to S3.
 
 
 /* =============================================================================
