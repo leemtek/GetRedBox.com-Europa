@@ -6,7 +6,7 @@ var gulp = require("gulp"),
     uglifycss = require('gulp-uglifycss'),
     gutil = require('gulp-util'),
     remoteSrc = require('gulp-remote-src')
-; // gulp
+;
 
 
 /* =============================================================================
