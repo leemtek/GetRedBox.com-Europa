@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: "grb-header",
+    selector: "grb-shared-header",
     template: `
         <div class="header-container">
             <!-- header start -->
@@ -12,6 +12,7 @@ import { Component } from "@angular/core";
             <!-- "centered": mandatory class for the centered logo layout -->
             <!-- ================ -->
             <header class="header  fixed    clearfix">
+
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 ">
@@ -21,7 +22,7 @@ import { Component } from "@angular/core";
 
                                 <!-- logo -->
                                 <div id="logo" class="logo">
-                                    <a href="index.html"><img id="logo_img" src="assets/images/logo-redbox.png" class="height-55" alt="Get Red Box"></a>
+                                    <a href="index.html"><img id="logo_img" src="https://d1xrp9zhb3ks3c.cloudfront.net/web/getredbox/images/logo-redbox.png" class="height-55" alt="Get Red Box"></a>
                                 </div>
 
                             </div>
@@ -77,7 +78,8 @@ import { Component } from "@angular/core";
 
                         </div>
                     </div>
-                </div><!-- /container -->
+                </div>
+
             </header>
             <!-- header end -->
         </div>
