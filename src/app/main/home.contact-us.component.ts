@@ -12,15 +12,9 @@ declare var $:any;
     selector: "grb-main-home-contact-us",
     template: `
         <h2 class="title">Contact Us</h2>
-        <div class="alert alert-success hidden" id="MessageSent2">
-            We have received your message, we will contact you very soon.
-        </div>
-        <div class="alert alert-danger hidden" id="MessageNotSent2">
-            Oops! Something went wrong please refresh the page and try again.
-        </div>
         <form #contactUsForm="ngForm" class="margin-clear" (ngSubmit)="mdSend()">
             <div class="form-group has-feedback mb-10">
-                <label class="sr-only" for="name2">Name</label>
+                <label class="sr-only" for="name">Name</label>
                 <input type="text" class="form-control" placeholder="Your Name" 
                     name="name" required
                     [(ngModel)]="objSenderInfo.strName"
@@ -28,7 +22,7 @@ declare var $:any;
                 <i class="fa fa-user form-control-feedback"></i>
             </div>
             <div class="form-group has-feedback mb-10">
-                <label class="sr-only" for="email2">Email address</label>
+                <label class="sr-only" for="email">Email address</label>
                 <input type="email" class="form-control" placeholder="Your Email" 
                     name="email" required
                     [(ngModel)]="objSenderInfo.strEmail"
@@ -51,18 +45,29 @@ declare var $:any;
                 site_key="6LcNoiMTAAAAANo5Nce1eKUXJ8ilUy1n4sg7khRu"
             ></re-captcha>
             </div>
-            <button id="footerBtnSubmit" type="submit" class="btn btn-success"
+            <button id="contactUsBtnSubmit" type="submit" class="btn btn-success"
                 [disabled]="contactUsForm.invalid || this.objSenderInfo.googleResponse === null"
             >Submit</button>
         </form>
-    `
+    `,
+    styles: [`
+        .ng-valid[required], .ng-valid.required  {
+            border-left: 5px solid #42A948; /* green */
+        }
+
+        .ng-invalid:not(form)  {
+            border-left: 5px solid #a94442; /* red */
+        }
+
+    `]
 })
 export class HomeContactUsComponent {
-    private strPostUrl: string = "https://somewhere.local";
+    // private strPostUrl: string = "http://localhost:5000/leemtek-secure-forms/us-central1/getredbox/send";
+    private strPostUrl: string = "https://us-central1-leemtek-secure-forms.cloudfunctions.net/getredbox/send";
     
     // Details of my visitor.
     objSenderInfo = {
-        strName: "Duane Leem",
+        strName: null,
         strEmail: null,
         strMessage: null,
         googleResponse: null
@@ -85,9 +90,9 @@ export class HomeContactUsComponent {
         // Attempt to send email.
         this.mdSendData(this.objSenderInfo)
             .subscribe(data => {
-                if (data.sent === "yes") {
+                if (data.status === "email sent") {
                     // Success
-                    $('#contactUsBtnSubmit').text('Email Sent to Duane.  Thanks! :)');
+                    $('#contactUsBtnSubmit').text('Email Sent. Thanks! :)');
                     $('#contactUsBtnSubmit').removeClass('btn-info').addClass('btn-success');
                     $("#contactUsBtnSubmit").prop('disabled', true);
                 } else {
