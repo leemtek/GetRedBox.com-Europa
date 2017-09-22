@@ -34,55 +34,8 @@ import { Component } from "@angular/core";
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="footer-content" ng-controller="ctrlSendEmail">
-                                    <h2 class="title">Contact Us</h2>
-                                    <div class="alert alert-success hidden" id="MessageSent2">
-                                        We have received your message, we will contact you very soon.
-                                    </div>
-                                    <div class="alert alert-danger hidden" id="MessageNotSent2">
-                                        Oops! Something went wrong please refresh the page and try again.
-                                    </div>
-                                    <form role="form" name="formContactUs" class="margin-clear" novalidate="">
-                                        <div class="form-group has-feedback mb-10">
-                                            <label class="sr-only" for="name2">Name</label>
-                                            <input type="text" class="form-control"
-                                                ng-class="{ 'has-error': formContactUs.frmName.$error.required && !formContactUs.frmName.$pristine }"
-                                                id="frmName"
-                                                placeholder="Name"
-                                                ng-model="contactDetails.name"
-                                                required
-                                            /><!-- /frmName -->
-                                            <i class="fa fa-user form-control-feedback"></i>
-                                        </div>
-                                        <div class="form-group has-feedback mb-10">
-                                            <label class="sr-only" for="email2">Email address</label>
-                                            <input type="email" class="form-control"
-                                                id="frmEmail"
-                                                placeholder="Enter email"
-                                                ng-model="contactDetails.email"
-                                                required
-                                            /><!-- /frmEmail -->
-                                            <i class="fa fa-envelope form-control-feedback"></i>
-                                        </div>
-                                        <div class="form-group has-feedback mb-10">
-                                            <label class="sr-only" for="message2">Message</label>
-                                            <textarea id="frmMessage" rows="4" class="form-control"
-                                                ng-class="{ 'has-error': formContactUs.frmMessage.$error.required && !formContactUs.frmMessage.$pristine }"
-                                                placeholder="Message"
-                                                ng-model="contactDetails.message"
-                                                required
-                                            ></textarea><!-- /frmMessage -->
-
-                                            <i class="fa fa-pencil form-control-feedback"></i>
-                                        </div>
-                                        <div vc-recaptcha key="'6LcNoiMTAAAAANo5Nce1eKUXJ8ilUy1n4sg7khRu'"></div>
-                                        <button type="button" class="btn btn-primary text-white" ng-click="fnClearForm();">Clear</button>
-                                        <button type="button" class="btn btn-default" id="submit"
-                                            ng-click="fnSendForm()"
-                                            ng-class="{'disabled': formContactUs.$invalid}"
-                                            ng-disabled="formContactUs.$invalid"
-                                        >Send</button>
-                                    </form>
+                                <div class="footer-content">
+                                    <grb-main-home-contact-us>Loading...</grb-main-home-contact-us>
                                 </div><!-- /footer-content -->
                             </div><!-- /col-md-6 -->
                         </div>
@@ -99,7 +52,7 @@ import { Component } from "@angular/core";
                         <div class="row">
                             <div class="col-md-12">
                                 <p class="text-center">
-                                    Copyright © 2016 GetRedBox.com. All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;
+                                    Copyright © {{getCurrentYear()}} GetRedBox.com. All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;
                                     Web Development by <a target="_blank" href="https://www.linkedin.com/in/duaneleem">Duane Leem</a>.
                                 </p>
                             </div>
@@ -115,5 +68,8 @@ import { Component } from "@angular/core";
     styles: [``]
 })
 export class FooterComponent {
-
+    getCurrentYear(): string {
+        let today = new Date();
+        return today.getFullYear().toString();
+    } // getCurrentYear()
 }
