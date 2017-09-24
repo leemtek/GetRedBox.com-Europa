@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod && aws s3 rm s3://web-getredbox --recursive && aws s3 cp ./dist s3://web-getredbox --recursive && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id E10FWC4MFC18K4 --paths '/*'"
   },
   "private": true,
   "dependencies": {
