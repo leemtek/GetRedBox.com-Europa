@@ -2,7 +2,7 @@ version: 0.2
 
 env:
     variables:
-        S3_BUCKET: "web-getredbox"
+        S3_BUCKET: "getredbox.com"
         BUILD_ENV: "prod"
         CLOUDFRONT_ID: "E10FWC4MFC18K4"
             
@@ -19,7 +19,7 @@ phases:
         - sudo apt-get update -y
         - sudo apt-get install -y yarn
         # Install Angular CLI
-        - yarn global add @angular/cli@latest
+        - yarn global add @angular/cli@1.4.2
         # Install node dependancies.
         - yarn
     build:
