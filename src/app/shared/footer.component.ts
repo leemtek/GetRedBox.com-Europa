@@ -21,9 +21,9 @@ import { Component } from "@angular/core";
                                         solutions improve their operations and how the latest technologies can save them thousands of dollars on their bottom
                                         line. Contact us to find out more about what we can do to save you money and improve your business today.
                                     </p>
-                                    <ul class="list-inline">
+                                    <!-- <ul class="list-inline">
                                         <li><i class="text-default fa fa-map-marker pl-10 pr-5"></i> <a href="https://maps.google.com/?q=181+Sand+Creek+Road,+Suite+G%0D+Brentwood,+CA+94513&entry=gmail&source=g" target="_blank">181 Sand Creek Road, Suite G, Brentwood, CA 94513</a></li>
-                                    </ul>
+                                    </ul> -->
                                     <ul class="list-inline mb-20">
                                         <li><i class="text-default fa fa-phone pl-10 pr-5"></i> <a href="tel:9255130000">+1 925-513-0000</a></li>
                                         <li><i class="text-default fa fa-envelope-o pl-10 pr-5"></i> <a class="link-dark" href="mailto:seana@getredbox.com" target="_blank">seana@getredbox.com</a></li>
