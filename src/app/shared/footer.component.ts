@@ -21,15 +21,20 @@ import { Component } from "@angular/core";
                                         solutions improve their operations and how the latest technologies can save them thousands of dollars on their bottom
                                         line. Contact us to find out more about what we can do to save you money and improve your business today.
                                     </p>
-                                    <ul class="list-inline mb-20">
-                                        <li><i class="text-default fa fa-map-marker pr-5"></i> Brentwood, CA</li>
-                                        <li><i class="text-default fa fa-phone pl-10 pr-5"></i> +1 925-513-0000</li>
-                                        <li><a href="mailto:seana@getredbox.com" class="link-dark"><i class="text-default fa fa-envelope-o pl-10 pr-5"></i> seana@getredbox.com</a></li>
+                                    <ul class="list-inline">
+                                        <li><i class="text-default fa fa-map-marker pl-10 pr-5"></i> <a href="https://maps.google.com/?q=181+Sand+Creek+Road,+Suite+G%0D+Brentwood,+CA+94513&entry=gmail&source=g" target="_blank">181 Sand Creek Road, Suite G, Brentwood, CA 94513</a></li>
                                     </ul>
-                                    <div class="separator-2"></div>
+                                    <ul class="list-inline mb-20">
+                                        <li><i class="text-default fa fa-phone pl-10 pr-5"></i> <a href="tel:9255130000">+1 925-513-0000</a></li>
+                                        <li><i class="text-default fa fa-envelope-o pl-10 pr-5"></i> <a class="link-dark" href="mailto:seana@getredbox.com" target="_blank">seana@getredbox.com</a></li>
+                                    </ul>
                                     <ul class="social-links circle margin-clear animated-effect-1">
                                         <li class="facebook"><a target="_blank" href="http://fb.me/GetRedBox"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="twitter"><a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                    </ul>
+                                    <div class="separator-2 mb-20 mt-20"></div>
+                                    <ul class="list-inline">
+                                        <li><a href="https://www.bbb.org/greater-san-francisco/business-reviews/information-technology-services/red-box-business-solutions-inc-in-brentwood-ca-315959" target="_blank"><img src="https://d1xrp9zhb3ks3c.cloudfront.net/web/getredbox/images/bbb_logo_270x103.png" style="width: 150px;" alt="BBB Accredited Business" /></a></li>
                                     </ul>
                                 </div>
                             </div>
