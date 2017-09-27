@@ -2,7 +2,7 @@ version: 0.2
 
 env:
     variables:
-        S3_BUCKET: "getredbox.com"
+        S3_BUCKET: "web-getredbox"
         BUILD_ENV: "prod"
         CLOUDFRONT_ID: "E10FWC4MFC18K4"
             
