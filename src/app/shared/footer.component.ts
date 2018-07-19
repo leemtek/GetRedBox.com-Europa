@@ -30,7 +30,10 @@ import { Component } from "@angular/core";
                                     </ul>
                                     <ul class="social-links circle margin-clear animated-effect-1">
                                         <li class="facebook"><a target="_blank" href="http://fb.me/GetRedBox"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/red-box-business-solutions1/"><i class="fa fa-linkedin"></i></a></li>
                                         <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="yelp"><a target="_blank" href="https://www.yelp.com/biz/red-box-business-solutions-brentwood?osq=red+box+business+solutions"><i class="fa fa-yelp"></i></a></li>
+                                        <li class="google"><a target="_blank" href="https://www.google.com/maps/place/Red+Box+Business+Solutions+Inc/@37.9321378,-121.696432,15z/data=!4m5!3m4!1s0x0:0x15962c871d76df6!8m2!3d37.9321378!4d-121.696432?hl=en"><i class="fa fa-google"></i></a></li>
                                     </ul>
                                     <div class="separator-2 mb-20 mt-20"></div>
                                     <ul class="list-inline">
